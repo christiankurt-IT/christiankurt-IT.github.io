@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Confession</title>
+<link rel="stylesheet" href="style.css">
+<style>
+
+body{
+font-family:Arial;
+background:linear-gradient(to right,#ff9a9e,#fad0c4);
+text-align:center;
+padding-top:120px;
+}
+
+.container{
+background:white;
+width:60%;
+margin:auto;
+padding:40px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+h1{
+color:#ff4d6d;
+}
+
+button{
+padding:12px 25px;
+margin:10px;
+font-size:16px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+.yes{
+background:#28a745;
+color:white;
+}
+
+.no{
+background:#dc3545;
+color:white;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>💌 I Have Something to Tell You</h1>
+
+<p id="message">
+Hi 😊<br><br>
+I've liked you for a while now.<br>
+You make my day better every time I talk with you.<br><br>
+
+I know this is fast but you can say no naman if di kapa ready, Can I court You?
+</p>
+
+<button class="yes" onclick="sayYes()">Yes </button>
+<button class="no" onclick="sayNo()">No </button>
+
+</div>
+
+<script>
+
+let noCount = 0;
+
+function sayNo(){
+
+noCount++;
+
+let message = document.getElementById("message");
+
+if(noCount == 1){
+message.innerHTML = "Are you sure? 🥺";
+}
+
+else if(noCount == 2){
+message.innerHTML = "Please think again...";
+}
+
+else if(noCount == 3){
+message.innerHTML = "Last chance... I promise I'll treat you well ";
+}
+
+else if(noCount >= 4){
+message.innerHTML = "Okay fine... you can only press YES now 😌";
+document.querySelector(".no").style.display = "none";
+}
+
+}
+
+function sayYes(){
+alert("You just made me the happiest person alive ❤️");
+window.location.href="hehe.html";
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background:linear-gradient(135deg,#ff758c,#ff7eb3);
+overflow:hidden;
+}
+
+/* Card */
+
+.container{
+background:rgba(255,255,255,0.85);
+backdrop-filter:blur(8px);
+padding:40px;
+width:420px;
+border-radius:20px;
+text-align:center;
+color:#333;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+animation:fadeIn 1s ease;
+}
+
+/* Title */
+
+h1{
+font-size:32px;
+margin-bottom:15px;
+color:#ff2e63;
+}
+
+/* Text */
+
+p{
+font-size:18px;
+line-height:1.6;
+color:#444;
+}
+
+/* Buttons */
+
+.buttons{
+margin-top:25px;
+}
+
+button{
+padding:12px 28px;
+font-size:16px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+transition:0.3s;
+margin:10px;
+}
+
+/* YES BUTTON */
+
+.yes{
+background:#ff4d6d;
+color:white;
+box-shadow:0 5px 15px rgba(255,0,100,0.4);
+}
+
+.yes:hover{
+transform:scale(1.1);
+}
+
+/* NO BUTTON */
+
+.no{
+background:#eee;
+color:#ff2e63;
+}
+
+.no:hover{
+transform:scale(1.1);
+}
+
+/* Floating hearts */
+
+.hearts::before,
+.hearts::after{
+content:"💖 💗 💕 💓 💞";
+position:absolute;
+width:100%;
+font-size:30px;
+animation:float 10s linear infinite;
+opacity:0.3;
+}
+
+.hearts::after{
+top:50%;
+animation-duration:15s;
+}
+
+/* Animations */
+
+@keyframes float{
+0%{transform:translateY(100vh);}
+100%{transform:translateY(-100vh);}
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:scale(0.9);}
+to{opacity:1; transform:scale(1);}
+}
